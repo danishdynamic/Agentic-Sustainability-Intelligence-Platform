@@ -18,7 +18,16 @@ An agentic RAG platform for evidence backed sustainability research at **GreenTe
 ---
 ## Interactive Dashboard
 
-![Interactive Dashboard Feature Demo](src/../frontend/src/assets/Recording.gif)
+<div style="max-height: 500px; overflow-y: scroll; border: 1px solid #ccc;">
+  <img src="assets/../frontend/src/assets/Screenshotdash.png" alt="Full Page Website Screenshot" width="100%">
+</div>
+
+
+<details>
+  <summary>🔍 Click to view agents in this screenshot</summary>
+  
+  <img src="assets/../frontend/src/assets/ScreenshotAgents.png" alt="Full Site Preview">
+</details>
 
 ---
 
