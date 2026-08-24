@@ -1,0 +1,3 @@
+import { Check, ShieldCheck } from "lucide-react";
+import { Panel } from "./Panel";
+export function ResultView({ result }: { result: { answer: string; grounding: { score: number }; metadata: { model: string } } }) { return <Panel title="Grounded answer" icon={<ShieldCheck size={17} />}><div className="answer"><div><p>{result.answer}</p><div className="answer-meta"><span className="passed"><Check size={14} /> GROUNDING PASSED · {Math.round(result.grounding.score * 100)}%</span><span>{result.metadata.model}</span></div></div><div className="answer-mark"><ShieldCheck size={30} /></div></div></Panel>; }

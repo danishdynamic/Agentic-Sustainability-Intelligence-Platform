@@ -1,0 +1,3 @@
+import { FileText } from "lucide-react";
+import { Panel } from "./Panel";
+export function EvidencePanel({ citations = [] }: { citations?: { chunk_id: string; document_name: string; section: string; text: string; relevance_score: number }[] }) { return <Panel title="Evidence selected" icon={<FileText size={17} />}><div className="evidence-list">{citations.map((citation, index) => <details className="evidence" key={citation.chunk_id} open={index === 0}><summary><span className="file-icon"><FileText size={15} /></span><span><strong>{citation.document_name}</strong><small>{citation.section} · {Math.round(citation.relevance_score * 100)}% match</small></span><span className="citation-number">[{index + 1}]</span></summary><p>{citation.text}</p></details>)}</div></Panel>; }

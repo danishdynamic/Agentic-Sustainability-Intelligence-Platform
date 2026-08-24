@@ -1,0 +1,3 @@
+import { Gauge } from "lucide-react";
+import { Panel } from "./Panel";
+export function RetrievalPanel({ retrieval }: { retrieval?: { vector_count: number; lexical_count: number; reranked_count: number } }) { const metrics = [["Vector search", retrieval?.vector_count ?? 0, "candidates"], ["BM25 lexical", retrieval?.lexical_count ?? 0, "candidates"], ["Reranked", retrieval?.reranked_count ?? 0, "chunks"]]; return <Panel title="Pipeline telemetry" icon={<Gauge size={17} />}><div className="metric-list">{metrics.map(([label, value, suffix]) => <div className="metric" key={label as string}><span>{label}</span><strong>{value}<small>{suffix}</small></strong></div>)}</div></Panel>; }
