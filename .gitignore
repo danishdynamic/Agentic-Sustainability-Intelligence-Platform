@@ -1,0 +1,104 @@
+# ==========================================
+# Environment & Secrets (Crucial)
+# ==========================================
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ==========================================
+# Python & FastAPI
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Coverage (pytest / RAGAS)
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+evaluation/results/*.json
+!evaluation/results/.gitkeep
+
+# ==========================================
+# Node.js & React Frontend
+# ==========================================
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/out/
+
+# Package Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite / React cache
+frontend/.vite/
+frontend/.cache/
+
+# ==========================================
+# Databases, Cache & Local Stores
+# ==========================================
+*.sqlite3
+*.db
+.vector_store/
+dump.rdb
+
+# ==========================================
+# Observability & Log Files
+# ==========================================
+*.log
+logs/
+.opentelemetry/
+
+# ==========================================
+# IDEs & OS System Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor configs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~

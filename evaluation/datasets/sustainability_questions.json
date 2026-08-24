@@ -1,0 +1,6 @@
+[
+  {"question":"What was the renewable energy target in 2024?","ground_truth":"50%","expected_documents":["sustainability-strategy-2024.md"]},
+  {"question":"What was the renewable energy target in 2025?","ground_truth":"70%","expected_documents":["sustainability-strategy-2025.md"]},
+  {"question":"What was the renewable energy target in 2026?","ground_truth":"90%","expected_documents":["sustainability-strategy-2026.md"]},
+  {"question":"What is the primary Scope 2 reduction lever?","ground_truth":"Renewable electricity procurement","expected_documents":["scope-2.md"]}
+]

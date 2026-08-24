@@ -1,6 +1,26 @@
 # Sustainability Intelligence Platform
 
-An agentic RAG platform for evidence-backed sustainability research at **GreenTech Industries**. Users ask questions about energy, emissions, water, climate, and sustainability strategy; the platform retrieves supporting knowledge, generates an answer, checks grounding, and exposes evidence and workflow activity in the React console.
+An agentic RAG platform for evidence backed sustainability research at **GreenTech Industries**. Users ask questions about energy, emissions, water, climate, and sustainability strategy; the platform retrieves supporting knowledge, generates an answer, checks grounding, and exposes evidence and workflow activity in the React console.
+
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat)](LICENSE)
+[![React](https://img.shields.io/badge/React-18%2B-61DAFB?style=flat&logo=react&logoColor=black)](frontend/README.md)
+[![Zustand](https://img.shields.io/badge/State-Zustand-443E38?style=flat&logo=bear&logoColor=white)](frontend/README.md)
+[![CORS](https://img.shields.io/badge/CORS-FastAPI_Middleware-00599C?style=flat)](backend/README.md)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688?style=flat&logo=fastapi&logoColor=white)](backend/README.md)
+[![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-FF6F61?style=flat)](backend/README.md)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16_pgvector-4169E1?style=flat&logo=postgresql&logoColor=white)](backend/README.md)
+[![Redis](https://img.shields.io/badge/Cache-Redis-DC382D?style=flat&logo=redis&logoColor=white)](backend/README.md)
+[![Google Gemini](https://img.shields.io/badge/LLM-Google_Gemini-8E75B2?style=flat&logo=googlegemini&logoColor=white)](backend/README.md)
+[![MCP](https://img.shields.io/badge/Protocol-MCP-5A54F9?style=flat&logo=anthropic&logoColor=white)](backend/README.md)
+[![OpenTelemetry](https://img.shields.io/badge/Observability-OpenTelemetry-000000?style=flat&logo=opentelemetry&logoColor=white)](backend/README.md)
+
+
+---
+## Interactive Dashboard
+
+![Interactive Dashboard Feature Demo](src/../frontend/src/assets/Recording.gif)
+
+---
 
 ## Highlights
 
@@ -46,25 +66,45 @@ flowchart TD
 
 ```mermaid
 sequenceDiagram
+
     participant U as User
+
     participant F as Frontend
+
     participant A as FastAPI
+
     participant G as LangGraph
+
     participant D as PostgreSQL/pgvector
+
     participant R as Redis
+
     participant M as Gemini
 
+
+
     U->>F: Submit question and metadata filters
+
     F->>A: POST /api/v1/research
+
     A->>G: Validate and start checkpointed run
+
     G->>R: Check response and semantic caches
+
     G->>D: Vector retrieval and BM25 retrieval
+
     G->>M: Generate from selected evidence
+
     M-->>G: Draft answer
+
     G->>G: Grounding and citation verification
+
     G->>D: Persist run, events, result
+
     A-->>F: run_id
+
     F->>A: Poll run, events, and result endpoints
+
     A-->>F: Status, evidence, citations, telemetry
 ```
 
